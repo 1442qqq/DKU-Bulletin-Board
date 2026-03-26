@@ -7,5 +7,5 @@ def home():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=448, debug=False)
+    app.run(host="0.0.0.0", port=448, debug=False)
 
