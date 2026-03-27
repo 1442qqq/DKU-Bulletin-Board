@@ -12,7 +12,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app) #DB 연결
-print(os.getenv("DATABASE_URL"))
 
 app.register_blueprint(home_views.bp) #home_views 블루프린트 등록
 
