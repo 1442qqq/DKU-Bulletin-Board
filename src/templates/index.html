@@ -76,6 +76,23 @@
         <h1>안녕하세요!</h1>
         <p>현재 진행중인 페이지입니다.</p>
     </section>
+    <!-- DB 조회 테스트-->
+    <h1>게시글 목록 조회 테스트</h1>
+
+    <!-- 데이터가 하나라도 있는지 확인 -->
+    {% if users %}
+        <ul>
+            {% for user in users %}
+                <li>
+                    <strong>ID:</strong> {{ user.id }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>DB에 저장된 데이터가 없습니다. (수파베이스에서 직접 데이터를 넣어보세요!)</p>
+    {% endif %}
+
+    <button onclick="location.reload()">새로고침</button>
 
     <section class="footer">
         아래를 확인하세요:
