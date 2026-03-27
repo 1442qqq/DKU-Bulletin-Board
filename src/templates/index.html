@@ -84,18 +84,20 @@
         <ul>
             {% for user in users %}
                 <li>
-                    <strong>ID:</strong> {{ user.id }}
+                    <strong>INDEX: </strong> {{ user.id }}
+                    <strong>| ID: </strong> {{ user.user_id }}
+                    <strong>| NICKNAME: </strong> {{ user.nickname }}
+                    <strong>| ROLE: </strong> {{ user.role }}
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>DB에 저장된 데이터가 없습니다. (수파베이스에서 직접 데이터를 넣어보세요!)</p>
+        <p>DB에 저장된 데이터가 없습니다.</p>
     {% endif %}
 
     <button onclick="location.reload()">새로고침</button>
 
     <section class="footer">
-        아래를 확인하세요:
         <br />
         <a href="https://github.com/1442qqq/DKU-Bulletin-Board" target="_blank">
             https://github.com/1442qqq/DKU-Bulletin-Board
